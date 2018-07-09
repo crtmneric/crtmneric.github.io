@@ -260,7 +260,7 @@ tbody tr:hover {
   table tbody tr td:nth-child(2):before {
     content: "Ödül";
   }
-  table tbody tr td:nth-child(2):before {
+  table tbody tr td:nth-child(3):before {
     content: "Hakediş Durumu";
   }
 
