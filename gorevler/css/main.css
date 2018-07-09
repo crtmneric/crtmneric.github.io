@@ -255,23 +255,15 @@ tbody tr:hover {
     top: 0;
   }
   table tbody tr td:nth-child(1):before {
-    content: "Date";
+    content: "Tarih";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Order ID";
+    content: "Öğün Sayısı";
   }
   table tbody tr td:nth-child(3):before {
-    content: "Name";
+    content: "Ödül Çarpanı";
   }
-  table tbody tr td:nth-child(4):before {
-    content: "Price";
-  }
-  table tbody tr td:nth-child(5):before {
-    content: "Quantity";
-  }
-  table tbody tr td:nth-child(6):before {
-    content: "Total";
-  }
+
 
   .column4,
   .column5,
