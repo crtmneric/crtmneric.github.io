@@ -258,7 +258,7 @@ tbody tr:hover {
     content: "Tarih";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Öğün Sayısı";
+    content: "Görev";
   }
   table tbody tr td:nth-child(3):before {
     content: "Ödül Çarpanı";
