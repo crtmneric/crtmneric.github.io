@@ -81,15 +81,15 @@ function main(){
     })
 } //end main()
 function model2(){
-    init_faceFilter2();
+    init_threeScene2(spec);
 }
 function model1()
 {
-   init_threeScene();
+   init_threeScene(spec);
 }
 
-function init_faceFilter2(videoSettings){
-    init_threeScene2(spec);
+function init_faceFilter2(){
+   
     
 } // end main()
 
