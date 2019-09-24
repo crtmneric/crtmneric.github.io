@@ -81,35 +81,16 @@ function main(){
     })
 } //end main()
 function model2(){
-    JeelizResizer.size_canvas({
-        canvasId: 'jeeFaceFilterCanvas',
-        callback: function(isError, bestVideoSettings){
-            init_faceFilter2(bestVideoSettings);
-        }
-    })
+    init_faceFilter2();
+}
+function model1()
+{
+    init_faceFilter();
 }
 
 function init_faceFilter2(videoSettings){
-    JEEFACEFILTERAPI.init({
-        followZRot: true,
-        canvasId: 'jeeFaceFilterCanvas',
-        NNCpath: '../../../dist/', // root of NNC.json file
-        maxFacesDetected: 1,
-        callbackReady: function(errCode, spec){
-          if (errCode){
-            console.log('AN ERROR HAPPENS. ERR =', errCode);
-            return;
-          }
-
-          console.log('INFO : JEEFACEFILTERAPI IS READY');
-          init_threeScene2(spec);
-        }, //end callbackReady()
-
-        //called at each render iteration (drawing loop) :
-        callbackTrack: function(detectState){
-          THREE.JeelizHelper.render(detectState, THREECAMERA);
-        } //end callbackTrack()
-    }); //end JEEFACEFILTERAPI.init call
+    init_threeScene2(spec);
+    
 } // end main()
 
 function init_faceFilter(videoSettings){
