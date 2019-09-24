@@ -85,7 +85,7 @@ function model2(){
 }
 function model1()
 {
-    init_faceFilter();
+   init_threeScene();
 }
 
 function init_faceFilter2(videoSettings){
