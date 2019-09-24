@@ -1,7 +1,7 @@
 "use strict";
 
 let THREECAMERA;
-const threeStuffs="a";
+var threeStuffs="a";
 // callback : launched if a face is detected or lost. TODO : add a cool particle effect WoW !
 function detect_callback(faceIndex, isDetected) {
     if (isDetected) {
