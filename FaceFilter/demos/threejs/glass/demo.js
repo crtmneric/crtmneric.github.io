@@ -1,7 +1,7 @@
 "use strict";
 
 let THREECAMERA;
-
+const threeStuffs;
 // callback : launched if a face is detected or lost. TODO : add a cool particle effect WoW !
 function detect_callback(faceIndex, isDetected) {
     if (isDetected) {
@@ -13,7 +13,7 @@ function detect_callback(faceIndex, isDetected) {
 
 // build the 3D. called once when Jeeliz Face Filter is OK
 function init_threeScene(spec) {
-    const threeStuffs = THREE.JeelizHelper.init(spec, detect_callback);
+     threeStuffs = THREE.JeelizHelper.init(spec, detect_callback);
 
     // CREATE THE GLASSES AND ADD THEM
     const r=JeelizThreeGlassesCreator({
