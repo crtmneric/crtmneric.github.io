@@ -31,3 +31,21 @@
     color: white;
     text-align: center;
   }
+
+  .headerTitle {
+    font-size: 24pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(12, 127, 194);
+    font-weight: bold;
+    position: relative;
+    height: 50px;
+    margin-left: 40px;
+  }
+  .headerSubtitle {
+    position: absolute;
+    font-size: 12pt;
+    bottom: -3px;
+    right: 0;
+    color: #444;
+    font-weight: normal;
+  }
