@@ -41,8 +41,8 @@ function init_threeScene(spec) {
     const aspecRatio=spec.canvasElement.width / spec.canvasElement.height;
     THREECAMERA=new THREE.PerspectiveCamera(40, aspecRatio, 0.1, 100);
 } // end init_threeScene()
-function init_threeScene2(spec) {
-    const threeStuffs = THREE.JeelizHelper.init(spec, detect_callback);
+function init_threeScene2() {
+   
 
     // CREATE THE GLASSES AND ADD THEM
     const r=JeelizThreeGlassesCreator({
@@ -66,9 +66,7 @@ function init_threeScene2(spec) {
     threeStuffs.faceObject.add(threeGlasses);
 
 
-    //CREATE THE CAMERA
-    const aspecRatio=spec.canvasElement.width / spec.canvasElement.height;
-    THREECAMERA=new THREE.PerspectiveCamera(40, aspecRatio, 0.1, 100);
+    
 } // end init_threeScene()
 
 //launched by body.onload() :
@@ -81,7 +79,7 @@ function main(){
     })
 } //end main()
 function model2(){
-    init_threeScene2(spec);
+    init_threeScene2();
 }
 function model1()
 {
