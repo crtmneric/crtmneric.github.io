@@ -24,6 +24,10 @@ This library is lightweight and it does not include any 3D engine or third party
   * [Changing the 3D engine](#changing-the-3d-engine)
   * [Changing the neural network](#changing-the-neural-network)
   * [Using the ES6 module](#using-the-es6-module)
+* [Integration](#integration)
+  * [With a bundler](#with-a-bundler)
+  * [With JavaScript frontend frameworks](#with-javascript-frontend-frameworks)
+  * [Native](#native)
 * [Hosting](#hosting)
   * [The development server](#the-development-server)  
   * [Hosting optimization](#hosting-optimization)
@@ -31,13 +35,14 @@ This library is lightweight and it does not include any 3D engine or third party
   * [Under the hood](#under-the-hood)
   * [Compatibility](#compatibility)
 * [Articles and tutorials](#articles-and-tutorials)
-* [License](#license)
+* [Jeeliz Partner Network](#jeeliz-partner-network)
 * [See also](#see-also)
+* [License](#license)
 * [References](#references)
 
 
 <p align="center">
-<img src='https://user-images.githubusercontent.com/11960872/37533324-cfa3e516-2941-11e8-99a9-96a1e20c80a3.jpg' />
+  <img src='https://user-images.githubusercontent.com/11960872/37533324-cfa3e516-2941-11e8-99a9-96a1e20c80a3.jpg' />
 </p>
 
 
@@ -157,22 +162,26 @@ If you have not bought a webcam yet, a screenshot video of some of these example
 ### Third party
 These amazing applications rely on this library for face detection and tracking:
 
+* [SpiderMan Far From Home AR web application](https://spider-manfarfromhome.herokuapp.com/), made by [Ignite](http://ignitexr.com/). This library is used for the first part of the experience (Edith glasses). Then [8th Wall SLAM engine](https://www.8thwall.com/) is used to display the drones.
+
 * Applications made by [Movable Ink](https://movableink.com/):
   * [Creative studio](https://movableink.com/product/augmented_reality?utm_source=linkedin&utm_medium=social&utm_campaign=q2_2019_arcampaign_productpage): easily create face filters without coding, only drag and drops! 
   * [Find your oasis](https://www.movablecamera.com/1/templates/70c57645-dca1-4a50-b312-0ea3d7c537fd/e1e7aa24-34a5-4818-b487-50ca3852754d.html),
   * [Been there, done that](https://www.movablecamera.com/1/templates/d8f2a1b6-0a73-4645-9e2b-7eb3c85ca2e0/109867fc-1ec0-4545-9bbe-6364ab1a3049.html),
   * [I <3 NY](https://www.movablecamera.com/1/templates/3e9a6b04-2663-4e2e-a8f8-0c675cd429fa/bb03f2fe-1ab0-4b4d-bc94-f146eefe8198.html),
-  * [Find your inner creative](https://www.movablecamera.com/1/templates/442bcb7c-3793-49e4-bea2-d56e68e73ec3/df7484bc-211d-4f43-adc1-41b13ca39f32.html)
-  * [Ski mask demo, with snow](https://www.movablecamera.com/6454/templates/7ed27eff-5978-4e0e-8345-0d53c7e894a2/d0115266-6d57-4d59-8775-1ac22f90eed6.html?mi_app_key=70ebf69e95809bf0&name=&mi_u=%7B%7Blead.SFDC%20Id%7D%7D)
+  * [Find your inner creative](https://www.movablecamera.com/1/templates/442bcb7c-3793-49e4-bea2-d56e68e73ec3/df7484bc-211d-4f43-adc1-41b13ca39f32.html),
+  * [Ski mask demo, with snow](https://www.movablecamera.com/6454/templates/7ed27eff-5978-4e0e-8345-0d53c7e894a2/d0115266-6d57-4d59-8775-1ac22f90eed6.html?mi_app_key=70ebf69e95809bf0&name=&mi_u=%7B%7Blead.SFDC%20Id%7D%7D),
 
-* Demos made by [Sansho](https://sansho.studio/):
-  * [Battle Santa for beard superiority](https://xmas.humanfoundry.com/)
+* [Battle Santa for beard superiority](https://xmas.humanfoundry.com/), made by [Sansho](https://sansho.studio/)
 
-* Demos made by [けしごむ/Nono](https://twitter.com/ke4563):
-  * [VRMjidori: Replace your head by a manga style character! ](https://vrmjidori.netlify.com/)
+* [VRMjidori](https://vrmjidori.netlify.com/): Replace your head by a manga style character provided in .VRM file format. This demo has been developed by [けしごむ/Nono](https://twitter.com/ke4563)
 
-* Other demos:
-  * [Bose headphones virtual try-on](https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-ii-wireless-custom.html?EarCap=sps-gloss&EarCup=jet-gloss&InnerBand=com-metallic&OuterBand=com-metallic&Spacer=com-metallic) (click on the TRY-ON button at the bottom right of the screen)
+* [Bose headphones virtual try-on](https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-ii-wireless-custom.html?EarCap=sps-gloss&EarCup=jet-gloss&InnerBand=com-metallic&OuterBand=com-metallic&Spacer=com-metallic) (click on the TRY-ON button at the bottom right of the screen)
+
+* [FaceVoice](https://github.com/CloffWrangler/facevoice): Control the mouse pointer with your head and by saying *Click*. [Discussion on Reddit](https://www.reddit.com/r/badUIbattles/comments/e1npf6/an_app_where_you_control_the_cursor_by_turning/)
+
+* [Halloween masks](https://halloween.tripod-digital.co.nz/): Amazing halloween masks experience made by [Thorsten Bux](https://twitter.com/thor_bux). The code is published on Github here: [ThorstenBux/halloween-masks](https://github.com/ThorstenBux/halloween-masks).
+
 
 If you have developped an application or a fun demo using this library, we would love to see it and insert a link here! Just contact us on [Twitter @StartupJeeliz](https://twitter.com/StartupJeeliz) or [LinkedIn](https://www.linkedin.com/company/jeeliz).
 
@@ -183,32 +192,36 @@ Here we describe how to use this library. Although we planned to add new feature
 
 ### Get started
 On your HTML page, you first need to include the main script between the tags `<head>` and `</head>`:
+
 ```html
- <script type="text/javascript" src="dist/jeelizFaceFilter.js"></script>
+ <script src="dist/jeelizFaceFilter.js"></script>
 ```
+
 Then you should include a `<canvas>` HTML element in the DOM, between the tags `<body>` and `</body>`. The `width` and `height` properties of the `<canvas>` element should be set. They define the resolution of the canvas and the final rendering will be computed using this resolution. Be careful to not enlarge too much the canvas size using its CSS properties without increasing its resolution, otherwise it may look blurry or pixelated. We advise to fix the resolution to the actual canvas size. Do not forget to call `JEEFACEFILTERAPI.resize()` if you resize the canvas after the initialization step. We strongly encourage you to use our helper `/helpers/JeelizResizer.js` to set the width and height of the canvas (see [Optimization/Canvas and video resolutions](#optimization) section).
+
 ```html
 <canvas width="600" height="600" id='jeeFaceFilterCanvas'></canvas>
 ```
+
 This canvas will be used by WebGL both for the computation and the 3D rendering. When your page is loaded you should launch this function:
 ```javascript
 JEEFACEFILTERAPI.init({
-    canvasId: 'jeeFaceFilterCanvas',
-    NNCpath: '../../../dist/', //path to JSON neural network model (NNC.json by default)
-    callbackReady: function(errCode, spec){
-        if (errCode){
-            console.log('AN ERROR HAPPENS. ERROR CODE =', errCode);
-            return;
-        }
-        [init scene with spec...]
-        console.log('INFO: JEEFACEFILTERAPI IS READY');
-    }, //end callbackReady()
+  canvasId: 'jeeFaceFilterCanvas',
+  NNCpath: '../../../dist/', //path to JSON neural network model (NNC.json by default)
+  callbackReady: function(errCode, spec){
+    if (errCode){
+      console.log('AN ERROR HAPPENS. ERROR CODE =', errCode);
+      return;
+    }
+    // [init scene with spec...]
+    console.log('INFO: JEEFACEFILTERAPI IS READY');
+  }, //end callbackReady()
 
-    //called at each render iteration (drawing loop)
-    callbackTrack: function(detectState){
-        //render your scene here
-        [... do something with detectState]
-    } //end callbackTrack()
+  //called at each render iteration (drawing loop)
+  callbackTrack: function(detectState){
+    // Render your scene here
+    // [... do something with detectState]
+  } //end callbackTrack()
 });//end init call
 ```
 
@@ -267,6 +280,7 @@ The initialization callback function ( `callbackReady` in the code snippet ) is 
 * `<WebGLRenderingContext> GL`: the WebGL context. The rendering 3D engine should use this WebGL context,
 * `<canvas> canvasElement`: the `<canvas>` element,
 * `<WebGLTexture> videoTexture`: a WebGL texture displaying the webcam video. It matches the dimensions of the canvas. It can be used as a background,
+* `<HTMLVideoElement> videoElement`: the video used as source for the webgl texture `videoTexture`,
 * `<int> maxFacesDetected`: the maximum number of detected faces. 
 
 
@@ -285,9 +299,9 @@ In multiface detection mode, `detectState` is an array. Its size is equal to the
 ### Miscellaneous methods
 After the initialization (ie after that `callbackReady` is launched ) , these methods are available:
 
-* `JEEFACEFILTERAPI.resize()`: should be called after resizing the `<canvas>` element to adapt the cut of the video,
+* `JEEFACEFILTERAPI.resize()`: should be called after resizing the `<canvas>` element to adapt the cut of the video. It should also be called if the device orientation is changed to take account of new video dimensions,
 
-* `JEEFACEFILTERAPI.toggle_pause(<boolean> isPause)`: pause/resume,
+* `JEEFACEFILTERAPI.toggle_pause(<boolean> isPause, <boolean> isShutOffVideo)`: pause/resume. This method will completely stop the rendering/detection loop. If `isShutOffVideo` is set to `true`, the media stream track will be stopped and the camera light will turn off. It returns a `Promise` object,
 
 * `JEEFACEFILTERAPI.toggle_slow(<boolean> isSlow)`: toggle the slow rendering mode: because this API consumes a lot of GPU resources, it may slow down other elements of the application. If the user opens a CSS menu for example, the CSS transitions and the DOM update can be slow. With this function you can slow down the rendering in order to relieve the GPU. Unfortunately the tracking and the 3D rendering will also be slower but this is not a problem is the user is focusing on other elements of the application. We encourage to enable the slow mode as soon as a the user's attention is focused on a different part of the canvas,
 
@@ -328,18 +342,18 @@ After the initialization (ie after that `callbackReady` is launched ) , these me
 
 We strongly recommend the use of the `JeelizResizer` helper in order to size the canvas to the display size in order to not compute more pixels than required. This helper also computes the best camera resolution, which is the closer to the canvas actual size. If the camera resolution is too high compared to the canvas resolution, your application will be unnecessarily slowed because it is quite costly to refresh the WebGL texture for each video frame. And if the video resolution is too low compared to the canvas resolution, the image will be blurry. You can take a look at the THREE.js boilerplate to see how it is used. To use the helper, you first need to include it in the HTML code:
 ```
-<script type="text/javascript" src="https://appstatic.jeeliz.com/faceFilter/JeelizResizer.js"></script>
+<script src="https://appstatic.jeeliz.com/faceFilter/JeelizResizer.js"></script>
 ```
 Then in your main script, before initializing Jeeliz FaceFilter, you should call it to size the canvas to the best resolution and to find the optimal video resolution:
 ```
 JeelizResizer.size_canvas({
   canvasId: 'jeeFaceFilterCanvas',
     callback: function(isError, bestVideoSettings){
-        JEEFACEFILTERAPI.init({
-          videoSettings: bestVideoSettings,
-          //...
-          //...
-        });
+      JEEFACEFILTERAPI.init({
+        videoSettings: bestVideoSettings,
+        //...
+        //...
+      });
     }
 });
 ```
@@ -378,7 +392,7 @@ Since July 2018 it is possible to change the neural network. When calling `JEEFA
     //...
   })
 ```
-It is also possible to give directly the NNC json file content by using `NNC` property instead of `NNCpath`.
+It is also possible to give directly the neural network model JSON file content by using `NNC` property instead of `NNCpath`.
 
 We provide several neural network models:
 * `dist/NNC.json`: this is the default neural network. Good tradeoff between size and performances,
@@ -400,30 +414,77 @@ import 'dist/jeelizFaceFilterES6.js'
 or using `require` ([see issue #72](https://github.com/jeeliz/jeelizFaceFilter/issues/72)):
 
 ```javascript
-const faceFilter =require('./lib/jeelizFaceFilterES6.js')
+const faceFilter = require('./lib/jeelizFaceFilterES6.js')
 
 faceFilter.init({
-    //you can also provide the canvas directly
-    //using the canvas property instead of canvasId:
-    canvasId: 'jeeFaceFilterCanvas',
-    NNCpath: '../../../dist/', //path to JSON neural network model (NNC.json by default)
-    callbackReady: function(errCode, spec){
-        if (errCode){
-            console.log('AN ERROR HAPPENS. ERROR CODE =', errCode);
-            return;
-        }
-        [init scene with spec...]
-        console.log('INFO: JEEFACEFILTERAPI IS READY');
-    }, //end callbackReady()
+  //you can also provide the canvas directly
+  //using the canvas property instead of canvasId:
+  canvasId: 'jeeFaceFilterCanvas',
+  NNCpath: '../../../dist/', //path to JSON neural network model (NNC.json by default)
+  callbackReady: function(errCode, spec){
+    if (errCode){
+      console.log('AN ERROR HAPPENS. ERROR CODE =', errCode);
+      return;
+    }
+    // [init scene with spec...]
+    console.log('INFO: JEEFACEFILTERAPI IS READY');
+  }, //end callbackReady()
 
-    //called at each render iteration (drawing loop)
-    callbackTrack: function(detectState){
-        //render your scene here
-        [... do something with detectState]
-    } //end callbackTrack()
+  //called at each render iteration (drawing loop)
+  callbackTrack: function(detectState){
+      // Render your scene here
+      // [... do something with detectState]
+  } //end callbackTrack()
 });//end init call
 ```
 
+## Integration
+
+### With a bundler
+If you use this library with a bundler (typically *Webpack* or *Parcel*), first you should use the [ES6 version](#using-the-es6-module).
+
+Then, with the standard library, we load the neural network model (specified by `NNCpath` provided as initialization parameter) using AJAX for the following reasons:
+* If the user does not accept to share its webcam, or if WebGL is not enabled, we don't have to load the neural network model,
+* We suppose that the library is deployed using a static HTTPS server.
+
+With a bundler, it is a bit more complicated. It is easier to load the neural network model using a classical `import` or `require` call and to provide it using the `NNC` init parameter:
+
+```javascript
+const faceFilter = require('./lib/jeelizFaceFilterES6.js')
+const neuralNetworkModel = require('./dist/NNC.json')
+
+faceFilter.init({
+  NNC:  neuralNetworkModel, //instead of NNCpath
+  //... other init parameters
+});
+```
+
+### With JavaScript frontend frameworks
+We don't cover here the integration with mainstream JavaScript frontend frameworks (*React*, *Vue*, *Angular*).
+If you submit Pull Request adding the boilerplate or a demo integrated with specific frameworks, you are welcome and they will be accepted of course.
+We can provide this kind of integration as a specific development service ( please contact us [here](https://jeeliz.com/contact-us/) ). But it is not so hard to do it by yourself. Here is a bunch of submitted issues dealing with *React* integration:
+
+* React integration: [#74](https://github.com/jeeliz/jeelizFaceFilter/issues/74#issuecomment-455624092) and [#122](https://github.com/jeeliz/jeelizFaceFilter/issues/122#issuecomment-533185928)
+* [is it possible to use this library in react native project](https://github.com/jeeliz/jeelizFaceFilter/issues/21)
+* [Having difficulty using JeelizThreejsHelper in ReactApp](https://github.com/jeeliz/jeelizFaceFilter/issues/137)
+
+You can also take a look at these Github code repositories:
+* [ikebastuz/jeelizTest](https://github.com/ikebastuz/jeelizTest): React demo of a CSS3D FaceFilter. It is based on [Create React App](https://github.com/facebook/create-react-app)
+* [CloffWrangler/facevoice](https://github.com/CloffWrangler/facevoice): Another demo based on [Create React App]
+* [nickydev100/FFMpeg-Angular-Face-Filter](https://github.com/nickydev100/FFMpeg-Angular-Face-Filter): Angular boilerplate
+
+### Native
+It is possible to execute a JavaScript application using this library into a *Webview* for a native app integration.
+But with IOS the camera access is disabled inside webviews. You have to implement a hack to stream the camera video into the webview using websockets.
+
+His hack has not been implemented into this repository but in a similar Jeeliz Library, [Jeeliz Weboji](https://github.com/jeeliz/jeelizWeboji). Here are the links:
+
+* [Apache Cordova IOS demo (it should also work on Android)](https://github.com/jeeliz/jeelizWeboji/tree/master/demos/cordova)
+* [Youtube video of the demo](https://youtu.be/yx9uA1g6-rA)
+* [Github submitted issue](https://github.com/jeeliz/jeelizWeboji/issues/27)
+* [Linkedin post detailing pros and cons](https://www.linkedin.com/feed/update/urn:li:activity:6587781973287198720)
+
+But it is still a dirty hack introducing a bottleneck. It still run pretty well on a high end device (tested on Iphone XR), but it is better to stick on a full web environment.
 
 ## Hosting
 
@@ -463,7 +524,8 @@ This API uses Jeeliz WebGL Deep Learning technology to detect and track the user
 
 In all cases, WebRTC should be implemented in the web browser, otherwise FaceFilter API will not be able to get the webcam video feed. Here are the compatibility tables from [caniuse.com](https://caniuse.com/) here: [WebGL1](https://caniuse.com/#feat=webgl), [WebGL2](https://caniuse.com/#feat=webgl2), [WebRTC](https://caniuse.com/#feat=stream).
 
-If a compatibility error is triggered, please post an issue on this repository. If this is a problem with the webcam access, please first retry after closing all applications which could use your device (Skype, Messenger, other browser tabs and windows, ...). Please include:
+If a compatibility error occurred, please post an issue on this repository. If this is a problem with the webcam access, please first retry after closing all applications which could use the camera (Skype, Messenger, other browser tabs and windows, ...). Please include:
+* the browser, the version of the browser, the operating system, the version of the operating system, the device model and the GPU if it is a desktop computer,
 * a screenshot of [webglreport.com - WebGL1](http://webglreport.com/?v=1) (about your `WebGL1` implementation),
 * a screenshot of [webglreport.com - WebGL2](http://webglreport.com/?v=2) (about your `WebGL2` implementation),
 * the log from the web console,
@@ -486,10 +548,13 @@ We are currently writing a series of tutorial for the API, starting by building 
 
 * Tutorial: Matrix theme face filter: [French version](https://xavierbourry.developpez.com/filtre-facial-webcam/), [English translation](https://jeeliz.com/blog/tutorial-javascript-webgl-webcam-facial-filter-on-the-theme-of-matrix/)
 
-## License
-[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). This application is free for both commercial and non-commercial use.
+* Video tutorial: a neat video tutorial about [Headtracking Controls with Three JS](https://youtu.be/_Fs4Sbn2LPc) by [Chris Godber](http://chrisgodber.co.uk/). He also releases other great video tutorials about web development, VR, 3D on [his Youtube channel](https://www.youtube.com/channel/UCdwx6HHyPoDTtL9iq1-sI3A)
 
-We appreciate attribution by including the [Jeeliz logo](https://jeeliz.com/wp-content/uploads/2018/01/LOGO_JEELIZ_BLUE.png) and a link to the [Jeeliz website](https://jeeliz.com) in your application or desktop website. Of course we do not expect a large link to Jeeliz over your face filter, but if you can put the link in the credits/about/help/footer section it would be great.
+
+## Jeeliz Partner Network
+If you are a freelance developer, or if you represent a software company or a web agency able to build projects with this library, you can join the Jeeliz Partner Network (JPN) by filling this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSccwO9Seyi4ZHkXc_Udn0VRWUhKZfXpO6AGMFamnWVVXOA1hA/viewform?usp=sf_link). We will redirect you development services requests involving this library. We will also provide premium support for integrating and using this library.
+
+Conversely, if you are looking for a reliable development service provider to build your face filter using this library, please [contact us here](https://jeeliz.com/contact-us/).
 
 
 ## See also
@@ -498,6 +563,12 @@ Our newest deep learning based library is called *Weboji*. It detects 11 facial 
 If you just want to detect if the user is looking at the screen or not, [Jeeliz Glance Tracker](https://github.com/jeeliz/jeelizGlanceTracker) is what you are looking for. It can be useful to play and pause a video whether the user is watching or not. This library needs fewer resources and the neural network file is much lighter.
 
 If you want to use this library for glasses virtual try-on (sunglasses, spectacles, ski masks), you can take a look at [Jeeliz VTO widget](https://github.com/jeeliz/jeelizGlassesVTOWidget). It includes a high quality and lightweight 3D engine which implements the following features: deferred shading, PBR, raytraced shadows, normal mapping, ... It also reconstructs the lighting environment around the user (ambient and directional lighting). But the glasses comes from a database hosted in our servers. If you want to add some models, please contact us.
+
+
+## License
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). This application is free for both commercial and non-commercial use.
+
+We appreciate attribution by including the [Jeeliz logo](https://jeeliz.com/wp-content/uploads/2018/01/LOGO_JEELIZ_BLUE.png) and a link to the [Jeeliz website](https://jeeliz.com) in your application or desktop website. Of course we do not expect a large link to Jeeliz over your face filter, but if you can put the link in the credits/about/help/footer section it would be great.
 
 
 ## References
