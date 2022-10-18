@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>AFavor</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href='css/main.min.css' rel='stylesheet' />
+</head>
+<body>
+
+    <!--================Header Menu Area =================-->
+    <header class="header_area">	
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Current <strong> CHALLENGES </strong> for me &#10084;	 </a></li> 
+                           
+                           
+                        </ul>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="home_banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6 col-xl-5 offset-xl-7">
+                        <div class="banner_content">
+                            <h3>My<br/>Challenges</h3>
+                            <p>I will share my challenges in this calender. To spread and share the enjoy!</p>
+                            <p>&#x2022;100 Days to run minimum 30 minutes</p>
+
+                           <!-- <a class="banner_btn" target="_blank" href="http://87.98.177.158/web/login">Start Using Web App<i class="ti-arrow-right"></i></a>
+                            <a class="banner_btn" target="_blank" href="img/release.apk">Download APK<i class="ti-arrow-right"></i></a>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Service  Area =================-->
+    <section class="service-area area-padding">
+        <div class="container">
+            <div id="calendar"></div>
+           
+        </div>
+    </section>
+    <!--================Service Area end =================-->
+
+
+   
+
+
+    <!--================About Area End =================-->
+
+
+
+
+
+    
+
+
+
+
+
+    <!-- ================ start footer Area ================= -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+
+                
+
+               
+               
+            </div>
+        </div>
+      
+    </div>
+</footer>
+<!-- ================ End footer Area ================= -->
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
+
+<script type="module">
+    
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+    import { getDatabase,ref,child,get } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyDwIsACxx5g1n4ngvlKVcz2k9aFXEZitYs",
+    authDomain: "my-calendar-cfb53.firebaseapp.com",
+    projectId: "my-calendar-cfb53",
+    storageBucket: "my-calendar-cfb53.appspot.com",
+    messagingSenderId: "303029343809",
+    appId: "1:303029343809:web:fa087d0725821f661658c0",
+    measurementId: "G-0JPPPF2L39",
+    databaseURL:"https://my-calendar-cfb53-default-rtdb.europe-west1.firebasedatabase.app"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getDatabase();
+    const reference= ref(db)
+    var events = []
+    get(child(reference,'events')).then((snapshot) => {
+        if (snapshot.exists()) {
+            console.log(snapshot.val());       
+            for (var event of snapshot.val()) 
+            {
+                if(event)
+                {
+                    events.push(event)
+                }
+                
+            }
+            console.log(events)
+            var todayDate = moment().startOf("day");
+            var YM = todayDate.format("YYYY-MM");
+            var YESTERDAY = todayDate.clone().subtract(1, "day").format("YYYY-MM-DD");
+            var TODAY = todayDate.format("YYYY-MM-DD");
+            var TOMORROW = todayDate.clone().add(1, "day").format("YYYY-MM-DD");
+
+            var calendarEl = document.getElementById("calendar");
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                headerToolbar: {
+                    left: "prev,next today",
+                    center: "title",
+                    right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
+                },
+
+                height: 800,
+                contentHeight: 780,
+                aspectRatio: 3,  // see: https://fullcalendar.io/docs/aspectRatio
+
+                nowIndicator: true,
+                now: TODAY + "T09:25:00", // just for demo
+
+                views: {
+                    dayGridMonth: { buttonText: "month" },
+                    timeGridWeek: { buttonText: "week" },
+                    timeGridDay: { buttonText: "day" }
+                },
+
+                initialView: "dayGridMonth",
+                initialDate: TODAY,
+
+                editable: true,
+                dayMaxEvents: true, // allow "more" link when too many events
+                navLinks: true,
+                events: events
+            });
+
+            calendar.render();
+
+        } else {
+            console.log("No data available");
+        }
+        }).catch((error) => {
+        console.error(error);
+    });
+
+</script>
+
+
+</body>
+</html>
